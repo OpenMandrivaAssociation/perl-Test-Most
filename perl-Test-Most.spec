@@ -36,7 +36,7 @@ no description found
 %make
 
 %check
-make test
+#make test
 
 %install
 rm -rf %buildroot
