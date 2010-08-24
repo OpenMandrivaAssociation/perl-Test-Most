@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Most commonly needed test functions and features
 License:    GPL+ or Artistic
@@ -20,6 +20,7 @@ BuildRequires: perl(Test::Harness)
 BuildRequires: perl(Test::Simple)
 BuildRequires: perl(Test::Warn)
 BuildRequires: perl(Module::Build::Compat)
+
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -45,7 +46,6 @@ rm -rf %buildroot
 
 %files
 %defattr(-,root,root)
-%doc Changes README
+%doc Changes README META.yml
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
