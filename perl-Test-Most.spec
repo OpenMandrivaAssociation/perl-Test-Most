@@ -1,9 +1,9 @@
 %define upstream_name    Test-Most
-%define upstream_version 0.22
+%define upstream_version 0.23
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Most commonly needed test functions and features
 License:    GPL+ or Artistic
