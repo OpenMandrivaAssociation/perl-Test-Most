@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:    Most commonly needed test functions and features
 License:    GPL+ or Artistic
@@ -20,7 +20,7 @@ BuildRequires: perl(Test::Harness)
 BuildRequires: perl(Test::Simple)
 BuildRequires: perl(Test::Warn)
 BuildRequires: perl(Module::Build::Compat)
-
+Requires: perl(Exception::Class)
 BuildArch: noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
