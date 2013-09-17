@@ -1,16 +1,15 @@
-%define upstream_name    Test-Most
-%define upstream_version 0.24
-
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+%define modname	Test-Most
+%define modver	0.24
 
 Summary:	Most commonly needed test functions and features
-License:	GPL+ or Artistic
+Name:		perl-%{modname}
+Version:	%perl_convert_version %{modver}
+Release:	6
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
-
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
+BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl(Exception::Class)
 BuildRequires:	perl(Test::Builder)
@@ -26,13 +25,12 @@ Requires:	perl(Test::Deep)
 Requires:	perl(Test::Differences)
 Requires:	perl(Test::Exception)
 Requires:	perl(Test::Warn)
-BuildArch: noarch
 
 %description
 Most commonly needed test functions and features.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -qn %{modname}-%{modver}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -43,6 +41,6 @@ Most commonly needed test functions and features.
 
 %files
 %doc Changes README META.yml
-%{_mandir}/man3/*
 %{perl_vendorlib}/*
+%{_mandir}/man3/*
 
