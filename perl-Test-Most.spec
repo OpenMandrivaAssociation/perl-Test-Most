@@ -1,5 +1,5 @@
 %define modname	Test-Most
-%define modver 0.31
+%define modver 0.33
 
 Summary:	Most commonly needed test functions and features
 Name:		perl-%{modname}
@@ -43,5 +43,6 @@ Most commonly needed test functions and features.
 %doc Changes README META.yml
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
+
 
 
