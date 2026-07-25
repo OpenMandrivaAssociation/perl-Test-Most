@@ -1,14 +1,14 @@
 %define modname	Test-Most
-%define modver 0.34
+%define modver 0.42
 
 Summary:	Most commonly needed test functions and features
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	6
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/Ovid/test--most
+Source0:	https://cpan.metacpan.org/authors/id/D/DC/DCANTRELL/Test-Most-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl-devel
